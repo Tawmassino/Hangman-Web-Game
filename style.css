@@ -1,0 +1,190 @@
+/* @font-face {
+  font-family: 'Patrick Hand';
+  src: url(fonts/Patrick_Hand/PatrickHand-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Patrick Hand SC';
+  src: url(fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf);
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+*{
+  font-family: 'Patrick Hand', 'Noto Color Emoji','Noto Emoji';
+  color: white;
+  /* text-shadow: 0.05em 0.05em black;    
+  -webkit-text-stroke: 0.02em black; */
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* -------------------------------------- GLOBAL -------------------------------------- */
+
+body {
+  background-image: url("seamless\ background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;    
+}
+
+h2{
+font-size: 2em;
+}
+.container {
+  font-size: 16px;
+  background-color:rgba(43, 43, 43, 0.6);
+  width: 90vw;
+  max-width: 90em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 1em;
+  border-radius: 0.6em;
+  /* box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25); */
+}
+#options-container {
+  text-align: center;
+}
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+  
+}
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Patrick Hand SC";
+  font-size: 1.5em;
+}
+
+#options-container button:hover {  
+  background-color: #595959;
+  color: #ffffff;
+}
+
+
+#options-container button:disabled {
+  border: 3px solid #808080;
+  color: #b8b8b8;
+  background-color: #efefef;
+}
+
+.active {
+  /* background-color: #8c52ff; */
+  border: 3px solid #000000;
+  color: rgb(0, 225, 255);
+  /* margin:500px; */
+  font-size:5em;
+}
+
+#options-container active{  
+  color: rgb(0, 225, 255); 
+  font-size:5em;
+}
+
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3em;   
+    
+}
+
+#letter-container button {
+  height: 2.4em;
+  width: 1em;
+  border: none;
+  background-color: transparent;  
+  cursor: pointer;
+  font-family: 'Patrick Hand';
+  font-size: 2em;
+}
+
+
+#canvasAndGuesses-container {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-between; /* Add space between the elements */
+  align-items: center; /* Center vertically within the container */  
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 3.6em;
+  /* margin: 0.6em 0 1.2em 0; */
+  margin-left: -100%;
+  gap: 0.1em; 
+  transform: translateX(-70%);
+}
+
+canvas {
+  width: 50%;
+  height: auto; 
+  max-width: 50%; 
+  max-height: 100%;    
+  /* margin-right: -100%; */
+  /* border: 5px solid #8c52ff;    */
+  transform: translateX(40%);
+}
+.hide {
+  display: none;
+}
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+#new-game-button {
+  font-size: 1.25em;
+  /* padding: 0.5em 1em; */
+  background-color: #8c52ff;
+  border: 3px solid #000000;
+  /* color: #fff; */
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.win-msg {
+  color: #39d78d;
+}
+.lose-msg {
+  color: #fe5152;
+}
+
+.game-over #canvasAndGuesses-container > *:not(#new-game-container) {
+  visibility: hidden;
+}
+
+.game-over #new-game-container {
+  visibility: visible;
+}
+
+.used{
+  color: red;
+}
+
+.selected{
+  color: #39d78d !important;
+}
