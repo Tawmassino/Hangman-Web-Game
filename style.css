@@ -160,12 +160,18 @@ canvas {
 #new-game-button {
   font-size: 1.25em;
   /* padding: 0.5em 1em; */
-  background-color: #8c52ff;
+  background-color: #ff00ff;
   border: 3px solid #000000;
   /* color: #fff; */
   border-radius: 0.2em;
   cursor: pointer;
 }
+
+#new-game-button:hover {  
+  background-color: #792bc2;  
+}
+
+
 .win-msg {
   color: #39d78d;
 }
@@ -180,11 +186,40 @@ canvas {
 .game-over #new-game-container {
   visibility: visible;
 }
+.speakbutton{
+  background-color: #c1c22b;
+  font-size: 1.25em; 
+  border: 3px solid #000000;  
+  border-radius: 0.2em;
+  cursor: pointer;
+  position:center;
+}
 
+.speakbutton:hover{
+  background-color: #f1c232;
+
+}
+
+.speakbutton.hide {
+  display: none;
+}
+
+.saidLetter{
+  font-size: 1.25em; 
+}
 .used{
   color: red;
 }
 
 .selected{
   color: #39d78d !important;
+}
+
+body.game-won {
+  background-color: lightgreen;
+}
+
+/* Add these styles for game lost */
+body.game-lost {
+  background-color: darkred;
 }
